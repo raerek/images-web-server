@@ -14,7 +14,7 @@ The following modules (and their dependencies) will be installed:
 
 ### Running the server
 `python3 app.py` will run the server in development / debug mode using port 3000. You can open the site using http://localhost:3000/ .  
-`gunicorn--bind 0.0.0.0:8000 --workers 3 app` will run the server in "production" mode on port 8000.
+`gunicorn --bind 0.0.0.0:8000 --workers 3 app:app` will run the server in "production" mode on port 8000.
 
 ## Server modes
 ### Non-proxy mode
