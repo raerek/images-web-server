@@ -30,14 +30,16 @@ def index():
         images = images_in_textfile
     else:
         images = os.listdir(IMAGES_FOLDER)
-    return template('base', images=images)
+    hostname = os.uname().nodename # Does not work on Windows.
+    return template('base', images=images, hostname=hostname)
 
 @app.get('/images/<image>')
 def serve_pictures(image):
     ''' Serving images form here,
 
     - either as local static files
-    - or proxied from IMAGE_SRV.'''
+    - or proxied from IMAGE_SRV.
+    '''
     if IMAGE_SRV:
         return requests.get('http://' + IMAGE_SRV + '/' + image).content
     else:

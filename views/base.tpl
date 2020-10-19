@@ -2,7 +2,7 @@
 <html lang="hu" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Épp a Dockerről tanulsz.</title>
+    <title>Page served from {{hostname}}.</title>
   </head>
   <body>
     % for image in images:
