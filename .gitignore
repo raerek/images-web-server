@@ -5,3 +5,4 @@ __pycache__/
 venv/
 images/*
 !images/images-web-server.png
+!images/remote-images.txt
