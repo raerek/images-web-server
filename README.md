@@ -18,7 +18,7 @@ The following modules (and their dependencies) will be installed:
 
 ## Server modes
 ### Non-proxy mode
-By default the server serves all image files found in the `images` folder. The server does not check whether non-image files are present in this folder. If present, they are likely to cause problems since the code generates `<img src="/images/file.ext">` tags for any files found.
+By default the server serves *.jpg, *.jpeg and *.png image files found in the `images` folder.
 
 ### Proxy mode
 If an environment variable called `IMAGE_SRV` is found then the server tries to load the `http://IMAGE_SRV/remote-images.txt` file when starting up. If file is not found, the server exists. If the file is found then the images listed inside will be proxied on the page displayed by Images Web Server. The images should be available at http://IMAGE_SRV/filename.ext.
