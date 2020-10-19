@@ -5,8 +5,13 @@
     <title>Page served from {{hostname}}.</title>
   </head>
   <body>
-    % for image in images:
-      <img src="/images/{{image}}" alt="">
+    % if images:
+      % for image in images:
+        <img src="/images/{{image}}" alt="">
+      % end
+    % end
+    % if error_message:
+      {{error_message}}
     % end
   </body>
 </html>
